@@ -1,0 +1,72 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TekaiTranslate - Home</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="navbar">
+    <div class="logo">TekaiTranslate</div>
+    <nav>
+      <a href="index.html" class="active">Home</a>
+      <a href="about.html">About</a>
+      <a href="languages.html">Languages</a>
+      <a href="phrasebook.html">Phrasebook</a>
+      <a href="grammar.html">Grammar</a>
+      <a href="voice.html">Voice Mode</a>
+    </nav>
+  </header>
+
+  <main class="translator-container">
+    <section class="translation-box">
+      <h1>English ↔ Tekoan Translator</h1>
+      <div class="language-select">
+        <select id="sourceLang">
+          <option value="en">English</option>
+          <option value="tk">Tekoan</option>
+        </select>
+        <button id="swapBtn">⇄</button>
+        <select id="targetLang">
+          <option value="tk">Tekoan</option>
+          <option value="en">English</option>
+        </select>
+      </div>
+
+      <div class="text-area">
+        <textarea id="inputText" placeholder="Enter text..."></textarea>
+        <textarea id="outputText" placeholder="Translation appears here..." readonly></textarea>
+      </div>
+
+      <div class="action-row">
+        <button id="translateBtn" class="primary-btn">Translate</button>
+        <button id="playTranslationBtn" class="secondary-btn">Play</button>
+        <label style="margin-left:12px; font-size:0.95rem;">
+          <input type="checkbox" id="autoplayCheckbox"> Auto-play
+        </label>
+      </div>
+
+      <section class="phrase-preview" id="phrasePreview">
+        <div class="phrase-preview-header">
+          <h2>Phrasebook Preview</h2>
+          <p>Tap any phrase to load it into the translator.</p>
+        </div>
+        <div id="phraseList" class="phrase-list">Loading phrases…</div>
+      </section>
+
+      <audio id="audioPlayer" hidden></audio>
+      </section>
+  </main>
+
+  <footer>
+    <p>© 2026 Bahnkut Tekoan Language Institute | Most Honorable Kingdom of Bahnkut</p>
+  </footer>
+
+  <script src="dataLoader.js"></script>
+  <script src="translateService.js"></script>
+  <script src="voice.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
