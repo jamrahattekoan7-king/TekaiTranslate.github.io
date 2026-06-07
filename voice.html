@@ -1,0 +1,41 @@
+<!-- voice.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TekaiTranslate - Voice Mode</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="navbar">
+    <div class="logo">TekaiTranslate</div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="languages.html">Languages</a>
+      <a href="phrasebook.html">Phrasebook</a>
+      <a href="grammar.html">Grammar</a>
+      <a href="voice.html" class="active">Voice Mode</a>
+    </nav>
+  </header>
+
+  <main class="content-page">
+    <h1>Voice Mode</h1>
+    <p>Voice Mode allows you to hear Tekoan phrases spoken aloud using Text‑to‑Speech (TTS). 
+       Enter text below and click “Speak” to listen.</p>
+
+    <section>
+      <textarea id="voiceInput" placeholder="Enter text to speak..."></textarea>
+      <button id="speakBtn" class="primary-btn">Speak</button>
+      <audio id="audioPlayer" controls></audio>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2026 Bahnkut Tekoan Language Institute | Most Honorable Kingdom of Bahnkut</p>
+  </footer>
+
+  <script src="voice.js"></script>
+</body>
+</html>
